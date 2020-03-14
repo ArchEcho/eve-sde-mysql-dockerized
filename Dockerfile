@@ -5,9 +5,9 @@ LABEL maintainer="admin@omniarch.io"
 # Database name.
 ENV MYSQL_DATABASE=eve_sde
 # Generating random password. Comment this if your are going to use your own password.
-ENV MYSQL_RANDOM_ROOT_PASSWORD=yes
+# ENV MYSQL_RANDOM_ROOT_PASSWORD=yes
 # Use your own password. Also comment MYSQL_RANDOM_ROOT_PASSWORD if you use this option.
-# ENV MYSQL_ROOT_PASSWORD=yourpasswordhere
+ENV MYSQL_ROOT_PASSWORD=yourpasswordhere
 
 # Fetching compressed db dump.
 ADD https://www.fuzzwork.co.uk/dump/mysql-latest.tar.bz2 /docker-entrypoint-initdb.d
